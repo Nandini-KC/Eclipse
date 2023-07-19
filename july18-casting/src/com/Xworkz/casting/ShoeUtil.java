@@ -11,11 +11,13 @@ public class ShoeUtil {
 			if(shoe instanceof PumaShoe)
 			{
 				PumaShoe puma=(PumaShoe)shoe;
+				puma.printInfo();
 				System.out.println("Creating casting for pumashoe");
 			}
 			if(shoe instanceof NikeShoe)
 			{
 				NikeShoe nike=(NikeShoe)shoe;
+				nike.printInfoo();
 				System.out.println("Creating casting for nike shoe");
 			}
 		}
