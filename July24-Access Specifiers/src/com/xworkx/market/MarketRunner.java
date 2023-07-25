@@ -9,8 +9,9 @@ public class MarketRunner {
 			SuperMarket sup=new SuperMarket();
 			sup.buy();
 			
+			
 			OnlineMarket online=new OnlineMarket();
-			online.buy();
+			online.sell();
 		
 			
 			

@@ -5,7 +5,7 @@ public class Market {
 	{
 		System.out.println("Invoking sell method in Market");
 	}
-	public void buy()
+	void buy()
 	{
 		System.out.println("Invoking buy method in Market");
 	}
