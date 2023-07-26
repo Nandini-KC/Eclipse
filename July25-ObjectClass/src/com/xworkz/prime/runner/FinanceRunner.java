@@ -5,7 +5,7 @@ import com.xworkz.prime.app.Finance;
 public class FinanceRunner {
 
 	public static void main(String[] args) {
-		Object object=new Object();
+		Object object=new Finance();
 		System.out.println(object);
 		
 		Finance finance=new Finance();

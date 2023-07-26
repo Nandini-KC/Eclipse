@@ -5,7 +5,7 @@ import com.xworkz.prime.app.River;
 public class RiverRunner {
 
 	public static void main(String[] args) {
-		Object object=new Object();
+		Object object=new River();
 		System.out.println(object);
 		
 		River river=new River();

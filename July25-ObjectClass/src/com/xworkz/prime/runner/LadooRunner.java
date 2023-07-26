@@ -5,7 +5,7 @@ import com.xworkz.prime.app.Ladoo;
 public class LadooRunner {
 
 	public static void main(String[] args) {
-		Object object=new Object();
+		Object object=new Ladoo();
 		System.out.println(object);
 		
 		Ladoo ladoo=new Ladoo();

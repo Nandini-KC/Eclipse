@@ -5,7 +5,7 @@ import com.xworkz.prime.app.Security;
 public class SecurityRunner {
 
 	public static void main(String[] args) {
-		Object object=new Object();
+		Object object=new Security();
 		System.out.println(object);
 		
 		Security security=new Security();

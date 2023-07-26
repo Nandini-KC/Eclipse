@@ -5,7 +5,7 @@ import com.xworkz.prime.app.President;
 public class PresidentRunner {
 
 	public static void main(String[] args) {
-		Object object=new Object();
+		Object object= new President();
 		System.out.println(object);
 		
 		President president=new President();

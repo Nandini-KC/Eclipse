@@ -5,7 +5,7 @@ import com.xworkz.prime.app.PrimeMinister;
 public class PrimeMinisterRunner {
 
 	public static void main(String[] args) {
-		Object object=new Object();
+		Object object=new PrimeMinister();
 		System.out.println(object);
 		
 		PrimeMinister primeminister=new PrimeMinister();
