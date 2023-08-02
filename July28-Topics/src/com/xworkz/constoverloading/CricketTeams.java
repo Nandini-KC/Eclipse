@@ -6,16 +6,17 @@ public class CricketTeams {
 	String bestPlayer;
 	String captain;
 	int noOfPlayers;
-	CricketTeams()
-	{
+
+	CricketTeams() {
 		System.out.println("Invoking no-args const in CricketTeams");
 	}
-	public CricketTeams(String teamNames, int noOfPlayers)
-	{
+
+	public CricketTeams(String teamNames, int noOfPlayers) {
 		System.out.println("Invoking String ,int constructor");
 		this.teamNames = teamNames;
 		this.noOfPlayers = noOfPlayers;
 	}
+
 	public CricketTeams(String teamNames, int noOfTeams, String bestPlayer, String captain) {
 		System.out.println("Invoking String ,int,String,String constructor");
 		this.teamNames = teamNames;
@@ -23,6 +24,5 @@ public class CricketTeams {
 		this.bestPlayer = bestPlayer;
 		this.captain = captain;
 	}
-	
-	
+
 }

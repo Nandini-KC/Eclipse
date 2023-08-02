@@ -10,4 +10,8 @@ public class Village {
 		System.out.println("Invoking exit method in Village");
 		
 	}
+	private void inner()
+	{
+		System.out.println("hi");
+	}
 }

@@ -6,4 +6,5 @@ public class OldVillage extends Village{
 	{
 		System.out.println("Invoking enter method in Old Village");
 	}
+	
 }
