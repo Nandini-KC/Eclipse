@@ -12,7 +12,7 @@ public class Example2 {
 	System.out.println(ref3);
 	int ref4=location.indexOf('g');
 	System.out.println(ref4);
-	location.split();
+	//location.split();
 	location.equalsIgnoreCase("karnataka");
 	location.equals("Banglore");
 	location.compareToIgnoreCase("");

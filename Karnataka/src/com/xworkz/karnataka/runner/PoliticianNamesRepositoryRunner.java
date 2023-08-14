@@ -14,6 +14,7 @@ public class PoliticianNamesRepositoryRunner {
 		ref.name("Venkatarami reddy");
 		
 		ref.display();
+		ref.findStartsWith("Jagan");
 	}
 
 }

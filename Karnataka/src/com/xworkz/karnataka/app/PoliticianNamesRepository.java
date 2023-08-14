@@ -7,4 +7,8 @@ public interface PoliticianNamesRepository {
 	{
 		
 	}
+	default String findStartsWith(String name)
+	{
+		return null;
+	}
 }
