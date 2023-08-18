@@ -16,5 +16,51 @@ public class MetroStaffRepositoryImpl implements MetroStaffRepository{
 		}
 		
 	}
+	@Override
+	public MetroStaffDTO findByName(String name) {
+		for(int pos=0;pos<index;pos++)
+		{
+			if(metro[pos].getName()==name)
+			{
+				System.out.println("Metro satff name found");
+				return metro[pos];
+			}
+			System.out.println("Index not matching,moving to next");
+		}
+		System.out.println("Staff name not found");
+		return null;
+	}
+	@Override
+	public MetroStaffDTO findByAge(int age) {
+		for(int i=0;i<index;i++)
+		{
+			if(metro[i].getAge()==age)
+			{
+				System.out.println("Metro satff age found");
+				return metro[i];
+			}
+			System.out.println("Index not matching,moving to next");
+		}
+		System.out.println("Staff age not found");
+		return null;
+	}
+	@Override
+	public MetroStaffDTO findBySalary(int salary) {
+		for(int i=0;i<index;i++)
+		{
+			if(metro[i].getSalary()==salary)
+			{
+				System.out.println("Metro satff salary found");
+				return metro[i];
+			}
+			System.out.println("Index not matching,moving to next");
+		}
+		System.out.println("Staff salary not found");
+		return null;
+	}
+	@Override
+	public MetroStaffDTO[] saveAll() {
+		return metro;
+	}
 
 }

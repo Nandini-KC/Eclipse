@@ -10,23 +10,38 @@ public class CustomerDTORunner {
 		
 		CustomerDTO customer1=new CustomerDTO("YashRaj", "yashraj@gmail.com", "Mysore", true);
 		System.out.println(customer1.toString());
-		CustomerRepository customerRepo1=new CustomerRepositoryImpl();
-		customerRepo1.save(customer1);
+		customerRepo.save(customer1);
 		
 		CustomerDTO customer2=new CustomerDTO("Manikanth", "manikath@gmail.com", "Hassan", true);
 		System.out.println(customer2.toString());
-		CustomerRepository customerRepo2=new CustomerRepositoryImpl();
-		customerRepo2.save(customer2);
+		customerRepo.save(customer2);
 		
 		CustomerDTO customer3=new CustomerDTO("KalyanRam", "kalyanram@gmail.com", "Chittoor", true);
 		System.out.println(customer3.toString());
-		CustomerRepository customerRepo3=new CustomerRepositoryImpl();
-		customerRepo3.save(customer3);
+		customerRepo.save(customer3);
 		
 		CustomerDTO customer4=new CustomerDTO("Guru", "guru12@gmail.com", "Hyderabad", false);
 		System.out.println(customer4.toString());
-		CustomerRepository customerRepo4=new CustomerRepositoryImpl();
-		customerRepo4.save(customer4);
+		customerRepo.save(customer4);
+		System.out.println("\n");
+		
+		CustomerDTO name=customerRepo.findByName("Johnson");
+		System.out.println(name);
+		System.out.println("\n");
+		CustomerDTO email=customerRepo.findByEmail("guru123@gmail.com");
+		System.out.println(email);
+		System.out.println("\n");
+		CustomerDTO location=customerRepo.findByLocation("Mysore");
+		System.out.println(location);
+		System.out.println("\n");
+		CustomerDTO[] customerDetails=customerRepo.saveAll();
+		for(int index=0;index<customerDetails.length;index++)
+		{
+			if(customerDetails[index]!=null)
+			{
+				System.out.println(customerDetails[index]);
+			}
+		}
 		
 	}
 

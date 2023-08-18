@@ -10,23 +10,37 @@ public class MarketDTORunner {
 		
 		MarketDTO market1=new MarketDTO("More", "Marthalli", 3, "Rajasekhar", true);
 		System.out.println(market1);
-		MarketRepository repo1=new MarketRepositoryImpl();
-		repo1.save(market1);
+		repo.save(market1);
 		
 		MarketDTO market2=new MarketDTO("Ashirwad", "Jaynagar", 4, "Sunil", true);
 		System.out.println(market2);
-		MarketRepository repo2=new MarketRepositoryImpl();
-		repo2.save(market2);
+		repo.save(market2);
 		
 		MarketDTO market3=new MarketDTO("Family Super market", "BTM 1st satge", 1, "Senthil raj", false);
 		System.out.println(market3);
-		MarketRepository repo3=new MarketRepositoryImpl();
-		repo3.save(market3);
+		repo.save(market3);
 		
 		MarketDTO market4=new MarketDTO("Food palace", "Majestic", 2, "Thalai kumar", true);
 		System.out.println(market4);
-		MarketRepository repo4=new MarketRepositoryImpl();
-		repo4.save(market4);
+		repo.save(market4);
+		System.out.println("\n");
+		MarketDTO type=repo.findByFloors(2);
+		System.out.println(type);
+		System.out.println("\n");
+		MarketDTO type1=repo.findByLocation("BTM");
+		System.out.println(type1);
+		System.out.println("\n");
+		MarketDTO type2=repo.findByType("Big bazar");
+		System.out.println(type2);
+		System.out.println("\n");
+		MarketDTO[] all=repo.saveAll();
+		for(int i=0;i<all.length;i++)
+		{
+			if(all[i]!=null)
+			{
+				System.out.println(all[i]);
+			}
+		}
 		
 	}
 
