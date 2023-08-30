@@ -2,16 +2,17 @@ package com.xworkz.metroStaff.app;
 
 import java.io.Serializable;
 
-public class MetroStaffDTO implements Serializable{
+public class MetroStaffDTO implements Serializable {
 	private String name;
 	private int age;
 	private String qualification;
 	private int salary;
-	
+
 	@Override
 	public String toString() {
-		
-		return "Name ="+this.name+" "+"Age="+this.age+" "+"Qualification="+this.qualification+" "+"Salary="+this.salary;
+
+		return "Name =" + this.name + " " + "Age=" + this.age + " " + "Qualification=" + this.qualification + " "
+				+ "Salary=" + this.salary;
 	}
 
 	public MetroStaffDTO(String name, int age, String qualification, int salary) {
@@ -53,5 +54,5 @@ public class MetroStaffDTO implements Serializable{
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	
+
 }

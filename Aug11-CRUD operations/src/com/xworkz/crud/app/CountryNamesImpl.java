@@ -1,7 +1,7 @@
 package com.xworkz.crud.app;
 
 public class CountryNamesImpl implements CountryNames{
-	private String[] names=new String[TOTAL_COUNTRIES];
+	private String[] names=new String[TOTAL_COUNTRIES];//10
 	private int index=0;
 	@Override
 	public void save(String countries) {

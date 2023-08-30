@@ -2,16 +2,17 @@ package com.xworkz.customer.app;
 
 import java.io.Serializable;
 
-public class CustomerDTO implements Serializable{
+public class CustomerDTO implements Serializable {
 	private String name;
 	private String email;
 	private String location;
 	private boolean married;
-	
+
 	@Override
 	public String toString() {
-		
-		return "Name="+this.name+" "+"Email="+this.email+" "+"Location="+this.location+" "+"Married="+this.married;
+
+		return "Name=" + this.name + " " + "Email=" + this.email + " " + "Location=" + this.location + " " + "Married="
+				+ this.married;
 	}
 
 	public CustomerDTO(String name, String email, String location, boolean married) {
@@ -53,5 +54,5 @@ public class CustomerDTO implements Serializable{
 	public void setMarried(boolean married) {
 		this.married = married;
 	}
-	
+
 }
