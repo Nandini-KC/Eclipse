@@ -1,5 +1,7 @@
 package com.xworkz.brandDTO;
 
+import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,13 +18,7 @@ public class BrandDTO implements Comparable<BrandDTO>{
 	private String owner;
 	private double revenueInBillion;
 	private String country;
-	@Override
-	public int compareTo(BrandDTO o) {
-		BrandDTO temp=this;
-		return temp.getName().compareTo(o.getName());
-		
-		
-	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -63,6 +59,12 @@ public class BrandDTO implements Comparable<BrandDTO>{
 			return false;
 		return true;
 	}
+	@Override
+	public int compareTo(BrandDTO o) {
+		BrandDTO temp=this;
+		return temp.getName().compareTo(o.getName());
+	}
+	
 	
 	
 

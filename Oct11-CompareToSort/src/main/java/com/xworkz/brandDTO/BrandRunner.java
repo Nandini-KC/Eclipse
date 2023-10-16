@@ -32,76 +32,28 @@ public class BrandRunner {
 		
 		System.out.println("---Sort collection by name----");
 		collection.stream().sorted().forEach(v->System.out.println(v));
-		
+		System.out.println();
 		System.out.println("--Revenue in Billion greater than 20 ---");
-		Collection<BrandDTO> collection1=new HashSet<BrandDTO>();
-		collection.stream().sorted().forEach(v->{
-			if(v.getRevenueInBillion()>20)
-			{
-				collection1.add(v);
-			}
-		});
-		collection1.forEach(v->System.out.println(v));
-		
+		collection.stream().filter(v->v.getRevenueInBillion()>20).forEach(v->System.out.println(v));
+		System.out.println();
 		System.out.println("---Revenue in Billion lesser than 20 ---");
-		Collection<BrandDTO> collection2=new HashSet<BrandDTO>();
-		collection.stream().sorted().forEach(v->{
-			if(v.getRevenueInBillion()<20)
-			{
-				collection2.add(v);
-			}
-		});
-		collection2.forEach(v->System.out.println(v));
-		
+		collection.stream().filter(v->v.getRevenueInBillion()<20).forEach(v->System.out.println(v));
+		System.out.println();
 		System.out.println("---USA brands---");
-		Collection<BrandDTO> collection3=new HashSet<BrandDTO>();
-		collection.stream().sorted().forEach(v->{
-			if(v.getCountry().equals("USA"))
-			{
-				collection3.add(v);
-			}
-		});
-		collection3.forEach(v->System.out.println(v.getName()+"="+v.getCountry()));
-		
+		collection.stream().filter(v->v.getCountry().equals("USA")).forEach(v->System.out.println(v.getName()+"="+v.getCountry()));
+		System.out.println();
 		System.out.println("---Not USA Brands---");
-		Collection<BrandDTO> collection4=new HashSet<BrandDTO>();
-		collection.stream().sorted().forEach(v->{
-			if(!v.getCountry().equals("USA"))
-			{
-				collection4.add(v);
-			}
-		});
-		collection4.forEach(v->System.out.println(v.getName()+"="+v.getCountry()));
-		
+		collection.stream().filter(v->!v.getCountry().equals("USA")).forEach(v->System.out.println(v.getName()+"="+v.getCountry()));
+		System.out.println();
 		System.out.println("---Brands starts with I---");
-		Collection<BrandDTO> collection5=new HashSet<BrandDTO>();
-		collection.stream().sorted().forEach(v->{
-			if(v.getName().startsWith("I"))
-			{
-				collection5.add(v);
-			}
-		});
-		collection5.forEach(v->System.out.println(v.getName()));
-		
+		collection.stream().filter(v->v.getName().startsWith("I")).forEach(v->System.out.println(v.getName()));
+		System.out.println();
 		System.out.println("---owner name length is greater than 5---");
-		Collection<BrandDTO> collection6=new HashSet<BrandDTO>();
-		collection.stream().sorted().forEach(v->{
-			if(v.getOwner().length()>5)
-			{
-				collection6.add(v);
-			}
-		});
-		collection6.forEach(v->System.out.println(v));
-		
+		collection.stream().filter(v->v.getOwner().length()>5).forEach(v->System.out.println(v));
+		System.out.println();
 		System.out.println("---owner name length is lesser than 5---");
-		Collection<BrandDTO> collection7=new HashSet<BrandDTO>();
-		collection.stream().sorted().forEach(v->{
-			if(v.getOwner().length()<5)
-			{
-				collection7.add(v);
-			}
-		});
-		collection7.forEach(v->System.out.println(v));
+		collection.stream().filter(v->v.getOwner().length()<5).forEach(v->System.out.println(v));
+		System.out.println("");
 	}
 
 }
